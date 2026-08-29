@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Libros en Línea</title>
+    <link rel="stylesheet" href="Portada.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-superior">
+            <span class="eslogan">...Creando nuevos mundos, historias y recuerdos</span>
+            <div class="carrito-icono" id="abrir-carrito">
+                🛒 Carrito <span id="contador-carrito">0</span>
+            </div>
+        </div>
+        <div class="header-inferior">
+            <input type="text" id="buscador" placeholder="Buscar libros por título o autor...">
+            <select id="filtro-genero">
+                <option value="todos">Todos los géneros</option>
+                <option value="Novela">Novela</option>
+                <option value="Ensayo">Ensayo</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <section id="catalogo-libros" class="grid-catalogo"></section>
+        <div id="mensaje-vacio" class="mensaje-oculto">No se encontraron libros que coincidan con la búsqueda o el filtrado.</div>
+        
+        <div class="paginacion">
+            <button id="btn-anterior">Anterior</button>
+            <span id="info-pagina">Página 1 de 1</span>
+            <button id="btn-siguiente">Siguiente</button>
+        </div>
+    </main>
+
+    <div id="modal-carrito" class="modal">
+        <div class="modal-contenido">
+            <div class="modal-header">
+                <h3>Tu Carrito de Compras</h3>
+                <span class="cerrar-modal" id="cerrar-carrito">&times;</span>
+            </div>
+            <div class="modal-cuerpo" id="cuerpo-carrito"></div>
+            <div class="modal-footer">
+                <div class="total-contenedor">
+                    <span>Total:</span>
+                    <span id="total-precio">$0.00</span>
+                </div>
+                <div class="botones-carrito">
+                    <button id="btn-vaciar" disabled>Vaciar carrito</button>
+                    <button id="btn-pagar" class="btn-pagar-estilo" disabled>Pagar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
